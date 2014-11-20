@@ -22,9 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-    require 'rdf/iiif'
+    require 'rdf-iiif'
     
-    RDF::IIIF.painting #=> RDF::URI("http://iiif.io/api/presentation/2#painting")
+    RDF::IIIFPresentation.painting #=> RDF::URI("http://iiif.io/api/presentation/2#painting")
     RDF::SIOC::Services.has_service #=> RDF::URI("http://rdfs.org/sioc/services#has_service")
 
 ## Contributing
