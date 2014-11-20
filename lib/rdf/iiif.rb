@@ -1,3 +1,2 @@
-require 'rdf/content_vocab'
-require 'rdf/dcmitype_vocab'
-require 'rdf/open_annotation/vocab'
+require 'rdf/iiif/vocab'
+require 'rdf/sioc_services_vocab'
