@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = RDF::IIIF::VERSION
   spec.authors       = ["Naomi Dushay"]
   spec.email         = ["ndushay@stanford.edu"]
-  spec.summary       = %q{IIIF (Presentation) vocabularies for RDF.rb}
-  spec.homepage      = ""
+  spec.summary       = %q{This gem deprecated in favor of rdf-vocab}
+  spec.homepage      = "https://github.com/sul-dlss/rdf-iiif"
   spec.license       = "Apache 2"
 
   spec.files         = `git ls-files -z`.split("\x0")

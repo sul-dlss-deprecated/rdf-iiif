@@ -2,7 +2,16 @@
 # This file generated automatically using vocab-fetch from http://rdfs.org/sioc/services#
 require 'rdf'
 module RDF
-  class SIOC::Services < RDF::StrictVocabulary("http://rdfs.org/sioc/services#")
+  # deprecate SIOC::Services
+  def self.const_missing(const_name)
+    super unless const_name == :SIOC::Services
+    warn "DEPRECATION WARNING: the class RDF::SIOC::Services is deprecated. Use RDF::Vocab::SiocServices from https://github.com/ruby-rdf/rdf-vocab instead."
+    SIOC::ServicesDeprecated
+  end
+
+  # @deprecated:  this class is deprecated in favor of RDF::Vocab::SiocServices
+  #   from rdf-vocab gem
+  class SIOC::ServicesDeprecated < RDF::StrictVocabulary("http://rdfs.org/sioc/services#")
 
     # Class definitions
     term :Service,
