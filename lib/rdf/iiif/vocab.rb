@@ -2,7 +2,16 @@
 # This file generated automatically using vocab-fetch from ../iiif-ontology-from-rob.owl and a little hand editing (added painting)
 require 'rdf'
 module RDF
-  class IIIFPresentation < RDF::StrictVocabulary("http://iiif.io/api/presentation/2#")
+  # deprecate IIIFPresentation
+  def self.const_missing(const_name)
+    super unless const_name == :IIIFPresentation
+    warn "DEPRECATION WARNING: the class RDF::IIIFPresentation is deprecated. Use RDF::Vocab::IIIF from https://github.com/ruby-rdf/rdf-vocab instead."
+    IIIFPresentationDeprecated
+  end
+
+  # @deprecated:  this class is deprecated in favor of RDF::Vocab::IIIF
+  #   from rdf-vocab gem
+  class IIIFPresentationDeprecated < RDF::StrictVocabulary("http://iiif.io/api/presentation/2#")
 
     # Class definitions
     term :AnnotationList,
